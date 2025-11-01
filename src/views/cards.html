@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="/src/assets/styles/layouts/_cards.scss">
+    <title>Cards</title>
+</head>
+
+<body>
+    <h2 class="principal-card-title" id="viaje">Un viaje a través de Suiza</h2>
+    <section class="cards-section">
+        <div class="card" data-modal="modal1"> <img src="./assets/images/cards/mountain-8110139_1280.jpg"
+                alt="Montañas de Suiza" class="card__img" />
+            <div class="card__content">
+                <h3 class="card__title">Montañas Suizas</h3>
+                <p class="card__text">Explora los majestuosos Alpes suizos, donde los picos nevados se combinan con
+                    verdes valles y senderos impresionantes. Una experiencia única para amantes de la naturaleza y el
+                    senderismo.</p> <button class="card__btn">Leer más</button>
+            </div>
+        </div>
+        <div class="card" data-modal="modal2"> <img src="./assets/images/cards/water-3161063_1280.jpg" alt="Lago Suizo"
+                class="card__img" />
+            <div class="card__content">
+                <h3 class="card__title">Lagos de Cristal</h3>
+                <p class="card__text">Sumérgete en los lagos más cristalinos de Suiza, rodeados de montañas y bosques.
+                    Ideal para paseos, actividades acuáticas y momentos de relax frente a paisajes idílicos.</p> <button
+                    class="card__btn">Leer más</button>
+            </div>
+        </div>
+        <div class="card" data-modal="modal3"> <img src="./assets/images/cards/switzerland-4941271_1280.jpg"
+                alt="Ciudades Suizas" class="card__img" />
+            <div class="card__content">
+                <h3 class="card__title">Ciudades Encantadoras</h3>
+                <p class="card__text">Descubre la mezcla perfecta entre historia, cultura y modernidad en ciudades como
+                    Zúrich, Ginebra o Lucerna. Arquitectura impresionante, museos y rincones llenos de encanto.</p>
+                <button class="card__btn">Leer más</button>
+            </div>
+        </div>
+    </section> <!-- MODALS -->
+    <div id="modal1" class="modal">
+        <div class="modal__content" data-aos="zoom-in-down"> <span class="modal__close">&times;</span> <img
+                src="./assets/images/cards/mountain-6741996_1280.jpg" alt="Montañas Suizas" class="modal__img" />
+            <h3 class="modal__title">Montañas Suizas</h3>
+            <p class="modal__text"> Los Alpes suizos ofrecen paisajes que quitan el aliento: montañas imponentes, valles
+                verdes y pueblos pintorescos escondidos entre los picos. Desde rutas de senderismo para todos los
+                niveles hasta estaciones de esquí de clase mundial, las montañas de Suiza son un paraíso para quienes
+                buscan aventura y tranquilidad al mismo tiempo. Descubre sus lagos alpinos, flora única y la cultura de
+                los pequeños pueblos de montaña. </p>
+        </div>
+    </div>
+    <div id="modal2" class="modal">
+        <div class="modal__content" data-aos="zoom-out-up"> <span class="modal__close">&times;</span> <img
+                src="./assets/images/cards/alpine-lake-4243396_1280.jpg" alt="Lago Suizo" class="modal__img" />
+            <h3 class="modal__title">Lagos de Cristal</h3>
+            <p class="modal__text"> Suiza alberga algunos de los lagos más claros y bellos de Europa. Desde el Lago de
+                Lucerna hasta el Lago Blausee, cada lago ofrece paisajes únicos, reflejos de montañas nevadas y aguas de
+                un azul intenso. Además de la belleza natural, estos lugares permiten practicar senderismo, paseos en
+                barco o simplemente disfrutar de la calma y el silencio de la naturaleza. Una parada obligatoria para
+                quienes buscan tranquilidad y contacto directo con la naturaleza. </p>
+        </div>
+    </div>
+    <div id="modal3" class="modal">
+        <div class="modal__content" data-aos="zoom-in-left"> <span class="modal__close">&times;</span> <img
+                src="./assets/images/cards/architecture-1853687_1280.jpg" alt="Ciudades Suizas" class="modal__img" />
+            <h3 class="modal__title">Ciudades Encantadoras</h3>
+            <p class="modal__text"> Las ciudades suizas combinan perfectamente tradición y modernidad. Zúrich destaca
+                por su vida cultural y sus pintorescas calles medievales; Ginebra ofrece historia diplomática y lagos
+                emblemáticos; mientras que Lucerna encanta con sus puentes de madera y arquitectura histórica. Explorar
+                estas ciudades significa recorrer museos, plazas históricas, mercados y disfrutar de la gastronomía
+                local, todo en un entorno seguro y ordenado. Cada ciudad tiene su propio carácter y ofrece experiencias
+                únicas para todos los visitantes. </p>
+        </div>
+    </div>
+    <script type="module" src="./assets/scripts/cards.js"></script>
+</body>
+
+</html>

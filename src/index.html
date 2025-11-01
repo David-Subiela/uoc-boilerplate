@@ -1,27 +1,75 @@
 <!DOCTYPE html>
 
 <html>
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width">
-    <link rel="stylesheet" type="text/css" href="./assets/styles/main.scss"><!-- do not remove this line! -->
-    <title>UOC Boilerplate</title>
-  </head>
-  <body>
-    <div class="uoc-container">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <link rel="stylesheet" type="text/css" href="./assets/styles/main.scss"><!-- do not remove this line! -->
+  <link
+    href="https://fonts.googleapis.com/css2?family=Helvetica+Neue:wght@400;700&family=Georgia:wght@400;700&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/hamburgers@1.2.1/dist/hamburgers.min.css">
+  <link href="../node_modules/aos/dist/aos.css" rel="stylesheet">
+  <title>PEC1 - Herramientas de desarrollo web</title>
+</head>
+
+<body>
+  <div class="flecha__arriba">
+    <img src="/src/assets/images/flecha.png" alt="flecha" />
+  </div>
+  <header class="header">
+    <nav class="nav">
       <picture>
-        <source srcset="./assets/images/logo.png?as=webp&width=350" type="image/webp" />
-        <img src="./assets/images/logo.png?width=350" alt="Universitat Oberta de Catalunya" class="uoc-logo" />
+        <source srcset="/src/assets/images/logo.webp?as=webp&width=350" type="image/webp" />
+        <img class="imagenes__logo" src="./assets/images/logo.webp" alt="Logo Suiza">
       </picture>
-      <h1 class="uoc-title">Hello, UOC!</h1>
-      <p>
-        This is a starter template for the Advanced HTML and CSS Tools courses
-        from the Master's Program in Multimedia Applications and the Master's
-        Program in Web App and Website Development at the Universitat Oberta de
-        Catalunya.
-      </p>
-    </div>
+
+      <button class="hamburger hamburger--spin" type="button" aria-label="Menú">
+        <span class="hamburger-box">
+          <span class="hamburger-inner"></span>
+        </span>
+      </button>
+
+      <ul class="nav__menu">
+        <li class="nav__item"><a href="#viaje" class="nav__link">Viaje</a></li>
+        <li class="nav__item"><a href="#events" class="nav__link">Eventos</a></li>
+        <li class="nav__item"><a href="#sugerencias" class="nav__link">Sugerencias</a></li>
+      </ul>
+      <ul class="social__icons">
+        <li class="social__twitter">
+          <a title="Síguenos en Twitter/X" href="https://x.com/myswitzerlandes?lang=es" target="_blank"
+            rel="alternate noopener"><i class="fab fa-x-twitter"></i></a>
+        </li>
+        <li class="social__facebook">
+          <a title="Síguenos en Facebook" href="https://www.facebook.com/SwitzerlandES/?locale=es_ES" target="_blank"
+            rel="alternate noopener"><i class="fab fa-facebook"></i></a>
+        </li>
+        <li class="social__instagram">
+          <a title="Síguenos en Instagram" href="https://www.instagram.com/switzerlandes/" target="_blank"
+            rel="alternate noopener"><i class="fab fa-instagram"></i></a>
+        </li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <include src="./views/carrusel.html"></include>
+
+    <include src="./views/cards.html"></include>
+
+    <include src="./views/eventos.html"></include>
+
+    <include src="./views/sugerencias.html"></include>
+
     <include src="./views/footer.html"></include>
     <script type="module" src="./assets/scripts/main.js"></script><!-- do not remove this line! -->
-  </body>
+    <script src="../node_modules/aos/dist/aos.js"></script>
+    <script>
+      AOS.init({
+        duration: 5000,
+      });
+    </script>
+</body>
+
 </html>
