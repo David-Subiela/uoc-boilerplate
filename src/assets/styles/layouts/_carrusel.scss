@@ -51,7 +51,7 @@
   
   .indicadores {
     position: absolute;
-    bottom: 20px;
+    bottom: 70px;
     left: 50%;
     transform: translateX(-50%);
     display: flex;
@@ -60,7 +60,7 @@
 
     .indicador {
       width: 4vw;
-      height: 0.7vw;
+      height: 0.5vw;
       background-color: rgba(255, 255, 255, 0.5);
       border-radius: 3px;
       cursor: pointer;

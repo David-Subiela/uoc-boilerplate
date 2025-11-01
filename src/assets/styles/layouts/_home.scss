@@ -195,7 +195,7 @@ a {
     }
 
     .social__icons {
-      display: flex;
+      display: none;
       justify-content: center;
       gap: 20px;
       margin-top: 1rem;
@@ -212,6 +212,10 @@ a {
       border-top: none;      
       animation: slideDown 0.3s ease forwards;
       z-index: 1100;
+    }
+
+    li.social__instagram {
+      margin-right: 0px; 
     }
 
     // .social__icons {

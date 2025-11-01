@@ -66,9 +66,17 @@
     <script type="module" src="./assets/scripts/main.js"></script><!-- do not remove this line! -->
     <script src="../node_modules/aos/dist/aos.js"></script>
     <script>
-      AOS.init({
-        duration: 5000,
-      });
+      if (window.innerWidth >= 1024) {
+        AOS.init({
+          duration: 5000,
+        });
+      } else {
+        document.querySelectorAll("[data-aos]").forEach((el) => {
+          el.removeAttribute("data-aos");
+          el.removeAttribute("data-aos-offset");
+          el.removeAttribute("data-aos-easing");
+        });
+      }
     </script>
 </body>
 
