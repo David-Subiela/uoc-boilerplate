@@ -50,7 +50,7 @@
         margin-bottom: 15px;
         color: var(--encabezado-footer, #333);
       }
-
+      /* stylelint-disable-next-line no-descending-specificity */
       .modal__image img {
         width: 100%;
         height: auto;
