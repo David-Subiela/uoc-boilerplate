@@ -1,0 +1,25 @@
+.hamburger {
+  display: none !important;
+  cursor: pointer;
+  padding: 0 !important;
+  outline: none;
+  position: absolute;
+  right: 1.5rem;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 1500;
+  background: transparent !important;
+  border: none !important;
+
+  .hamburger-box {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}
+
+@media (max-width: 575px) {
+  .hamburger {
+    display: block !important;
+  }
+}

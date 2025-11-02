@@ -14,7 +14,12 @@
  */
 
  @use "layouts/home"; 
+ @use "layouts/hamburger"; 
  @use "layouts/carrusel";
+ @use "layouts/cards";
+ @use "layouts/eventos";
+ @use "layouts/sugerencias";
+ @use "layouts/footer";
  
 /**
  * Do NOT include anything else in this file!
