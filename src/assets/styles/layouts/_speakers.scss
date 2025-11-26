@@ -1,0 +1,85 @@
+.speakers__main {
+  padding: 4rem 2rem;
+}
+
+.speakers {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  justify-content: center;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.speakers__card {
+  background: white;
+  border: 1px solid #ddd;
+  padding: 1rem;
+  width: 250px;
+  text-align: center;
+  border-radius: 10px;
+  cursor: pointer;
+
+  img {
+    width: 100%;     
+    max-width: 100%; 
+    height: auto;    
+    display: block;
+    margin: .65rem auto;
+    border-radius: 10px;
+  }
+}
+
+.speakers__modal {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,.6);
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+  font-size: 20px;
+
+  &.show {   
+    display: flex;
+  }  
+}
+
+
+.modal__content__speakers {
+  background: white;
+  padding: 2rem;
+  max-width: 500px;
+  border-radius: 10px;
+  position: relative;
+  animation: fadeIn .3s ease-out;
+}
+
+.modal__text {
+  padding-top: 20px;
+}
+
+.modal__img {
+  width: 50%;
+  display: block; 
+  margin: 0 auto;
+}
+
+.modal__close {
+  position: absolute;
+  top: .5rem;
+  right: .8rem;
+  cursor: pointer;
+  font-size: 1.6rem;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: scale(.9); }
+  to { opacity: 1; transform: scale(1); }
+}
+
+@media (max-width: 480px) {
+  .modal__text {
+    font-size: 14px;
+  }
+}

@@ -1,0 +1,135 @@
+@use "../variables";
+
+#carrusel {
+  width: 100%;
+  height: 90vh;
+  overflow: hidden;
+
+  #carrusel__contenido {
+    position: relative;
+    width: 100%;
+    height: 100%;
+
+    #carrusel__caja {
+      display: flex;
+      width: 500%;
+      height: 100%;
+      transition: transform 1s ease-in-out;
+
+      .carrusel__elemento {
+        flex: 1 0 100%;
+        height: 100%;
+        position: relative;
+
+        img {
+          width: 20%;
+          height: 100%;
+          object-fit: cover;
+        }
+      }
+    }
+  }
+
+  .hero__text {
+    position: absolute;
+    top: 50%;
+    left: 5%;
+    transform: translateY(-50%);
+    color: variables.$color-carrusel;
+    text-shadow: 0 2px 8px rgba(0, 0, 0, 0.7);    
+
+    .hero__title {
+      font-size: 3rem;
+      font-weight: bold;
+    }
+
+    .hero__subtitle {
+      font-size: 1.5rem;
+      margin-top: 0.5rem;
+    }
+  }
+  
+  .indicadores {
+    position: absolute;
+    bottom: 70px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 12px;
+    z-index: 10;
+
+    .indicador {
+      width: 4vw;
+      height: 0.5vw;
+      background-color: rgba(255, 255, 255, 0.5);
+      border-radius: 3px;
+      cursor: pointer;
+      transition: all 0.4s ease;
+
+      &.activo {
+        width: 7vw;
+        background-color: white;
+      }
+    }
+  }
+  
+  @media (min-width: 992px) {
+    .carrusel {
+      .slide {
+        height: 85vh;
+
+        .caption {
+          bottom: 20%;
+          font-size: 1.4rem;
+          width: 50%;
+        }
+      }
+
+      .controls button {
+        font-size: 2rem;
+        padding: 0.75rem 1.25rem;
+      }
+    }
+  }
+
+  @media (min-width: 768px) {
+    .carrusel {
+      .slide {
+        height: 70vh;
+
+        .caption {
+          font-size: 1.2rem;
+          width: 70%;
+        }
+      }
+    }
+  }
+
+  @media (max-width: 630px) {
+    .hero__text {
+      .hero__title {
+        font-size: 2.5rem;
+      }
+
+      .hero__subtitle {
+        font-size: 1rem;
+      }
+    }    
+  }
+
+  @media (max-width: 530px) {
+    .hero__text {
+      .hero__title {
+        font-size: 2rem;
+      }      
+    }    
+  }
+
+  @media (max-width: 440px) {
+    .hero__text {
+      .hero__title {
+        font-size: 1.7rem;
+      }      
+    }    
+  }
+}

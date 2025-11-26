@@ -1,0 +1,114 @@
+@use "../variables";
+
+.modal__reserva {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.6);
+  display: grid;
+  place-items: center;
+  z-index: 999;
+}
+
+.modal__reserva[hidden] {
+  display: none;
+}
+
+.modal__reserva__content {
+  background: white;
+  padding: 2rem;
+  border-radius: 12px;
+  width: min(90%, 500px);
+  position: relative;
+}
+
+.modal__reserva__close {
+  position: absolute;
+  top: .5rem;
+  right: .5rem;
+  background: none;
+  border: none;
+  font-size: 2rem;
+  cursor: pointer;
+}
+
+.modal__reserva__title {
+  font-family: variables.$font-title;
+  margin-bottom: 1rem;
+  text-align: center;
+  font-size: 1.8rem;
+  color: variables.$color-accent;
+}
+
+.modal__reserva__subtitle {
+  font-family: variables.$font-title;  
+  text-align: center;
+  font-size: 1.4rem;
+  color: variables.$color-text;
+  margin-bottom: 1rem;
+}
+
+.modal__reserva__form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+
+  label {
+    font-weight: 600;
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+    color: variables.$color-text;
+  }
+
+  input,
+  textarea {
+    width: 100%;
+    padding: 0.8rem 1rem;
+    font-size: 1rem;
+    border-radius: 12px;
+    border: 1px solid rgba(variables.$color-accent, 0.2);
+    background: rgba(255, 255, 255, 0.7);
+    transition: all 0.2s ease;
+
+    &:focus {
+      border-color: variables.$color-accent;
+      box-shadow: 0 0 0 3px rgba(variables.$color-accent, 0.15);
+      outline: none;
+    }
+  }
+
+  textarea {
+    resize: vertical;
+    min-height: 100px;
+  }
+
+  button[type="submit"] {
+    background: variables.$color-accent;
+    color: white;
+    border: none;
+    border-radius: 50px;
+    padding: 0.9rem 1.2rem;
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: background 0.25s ease, transform 0.15s ease;
+
+    &:hover {
+      background: darken(variables.$color-accent, 10%);
+      transform: translateY(-2px);
+    }
+
+    &:active {
+      transform: translateY(0);
+    }
+  }
+}
+
+@media (max-width: 420px) {
+  .modal__reserva__content {
+    padding: 2rem;
+  }
+
+  .modal__reserva__title {
+    font-size: 1.5rem;
+  }
+}

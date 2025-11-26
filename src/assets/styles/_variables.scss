@@ -10,3 +10,31 @@ $uoc-masterbrand: #73edff;
 $uoc-bg: color.scale($uoc-masterbrand, $lightness: 70%);
 
 $mqMinWidth: 420px;
+
+$theme-colors: (
+  "primary": #fabada,
+  "secondary": #6c757d,
+  "success": #28a745,
+  "danger": #dc3545
+);
+$font-family-base: 'Open Sans', sans-serif;
+
+$color-bg: #f5efe7;
+$color-accent: #c04a00;
+$color-carrusel: #040404;
+$color-text: #333;
+$font-title: 'Merriweather', serif;
+$font-body: 'Open Sans', sans-serif;
+
+$accent: hwb(210 15% 0%);
+$accent-p3: color(display-p3 0.2 0.45 1);
+$bg-light: hwb(210 90% 0%);
+
+$color-acierto: color(display-p3 0.1 0.75 0.2); 
+$color-error: hsl(0, 50%, 40%);                  
+$color-fondo: hwb(45 90% 5%);
+
+:root {  
+  --color-error: #{$color-error};
+  --color-acierto: #{$color-acierto};
+}

@@ -1,0 +1,48 @@
+@use "../variables";
+
+.article__content {
+  max-width: 800px;
+  margin: 2rem auto;
+  padding: 2rem;
+  line-height: 1.7;
+  background-color: #f9fcff;
+  border-radius: 10px;
+
+  &:has(img) {
+    padding: 1rem;
+  }
+
+  :is(h1, h2, h3) {
+    color: #2a6ac7;
+  }
+
+  :where(p, li) {
+    font-size: 1.05rem;
+  }
+
+  .article__image {
+    width: 100%;     
+    max-width: 100%; 
+    height: auto;    
+    display: block;
+    margin: 2rem auto;
+    border-radius: 10px;
+  }
+
+  ul.article__list {
+    margin: 1.5rem 0 2rem;
+    padding-left: 1.5rem;
+
+    li {
+      margin-bottom: 0.5rem;
+    }
+  }
+
+  blockquote {
+    border-left: 4px solid variables.$color-accent;
+    padding-left: 1rem;
+    margin: 1.5rem 0;
+    font-style: italic;
+    color: #555;
+  }
+}

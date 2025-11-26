@@ -1,0 +1,64 @@
+@use "../variables";
+
+.juego__adivina {
+  padding: 8svh 4svw;
+  text-align: center;
+  background: variables.$color-fondo;
+  border-radius: 2rem;
+  max-width: 600px;
+  margin: auto;
+
+  h2 {
+    padding-bottom: 45px;
+  }
+}                
+
+.contenedor__imagen img {
+  width: 100%;
+  height: 40dvh;
+  object-fit: cover;
+  border-radius: 1rem;
+  filter: blur(12px);
+  transition: filter 0.1s;
+}
+.contenedor__imagen img.sin-blur {
+  filter: blur(0);
+}
+
+.opciones {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(46cqmin, 1fr));
+  gap: 1rem;
+  margin-top: 2rem;
+}
+
+.opcion {
+  padding: 1rem;
+  border: none;
+  background: white;
+  border-radius: 1rem;
+  cursor: pointer;
+  font-size: 1rem;
+  box-shadow: 0 0 8px rgba(0,0,0,0.15);
+  transition: transform 0.2s;
+}
+
+.opcion:hover {
+  transform: scale(1.03);
+}
+
+#resultado {
+  margin-top: 1.5rem;
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+#reiniciar {
+  margin-top: 1rem;
+  padding: 0.8rem 1.5rem;
+  border-radius: 1rem;
+  border: none;
+  background: color(display-p3 0.7 0.4 0.1);
+  color: white;
+  cursor: pointer;
+}
