@@ -16,8 +16,7 @@
       <button class="modal__reserva__close">&times;</button>
       <h3 class="modal__reserva__title">Reserva tu plaza</h3>
       <h4 class="modal__reserva__subtitle">Domingo, 25 de enero de 2026</h4>
-      <form name="reserva" method="POST" data-netlify="true" class="modal__reserva__form" netlify-honeypot="bot-field"
-        netlify>
+      <form name="reserva" method="POST" data-netlify="true" class="modal__reserva__form" netlify-honeypot="bot-field">
         <input type="hidden" name="form-name" value="reserva">
         <input type="text" name="bot-field" style="display:none">
         <label>
@@ -54,7 +53,7 @@
   </main>
   <include src="./views/footer.html"></include>
   <script type="module" src="./assets/scripts/main.js"></script><!-- do not remove this line! -->
-  <form name="reserva" netlify hidden>
+  <form name="reserva" method="POST" netlify hidden>
     <input type="text" name="name">
     <input type="email" name="email">
     <textarea name="message"></textarea>
