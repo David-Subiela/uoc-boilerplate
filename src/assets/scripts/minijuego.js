@@ -63,9 +63,9 @@ document.addEventListener("DOMContentLoaded", () => {
   let preguntas = barajarArray(preguntasOriginales);
 
   const imagen = document.getElementById("imagen-plato");
-  const opcionesContenedor = document.querySelector(".opciones");
-  const resultado = document.getElementById("resultado");
-  const reiniciar = document.getElementById("reiniciar");
+  const opcionesContenedor = document.querySelector(".juego__adivina__options");
+  const resultado = document.querySelector(".juego__adivina__result");
+  const reiniciar = document.querySelector(".juego__adivina__reset-button");
 
   function cargarPregunta() {
     const pregunta = preguntas[indice];
@@ -83,7 +83,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const opcionesBarajadas = barajarArray([...pregunta.opciones]);
     opcionesBarajadas.forEach((op) => {
       const btn = document.createElement("button");
-      btn.classList.add("opcion");
+      btn.classList.add("juego__adivina__option");
       btn.textContent = op;
       btn.addEventListener("click", () => comprobarRespuesta(op));
       opcionesContenedor.appendChild(btn);

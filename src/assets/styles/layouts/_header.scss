@@ -1,38 +1,48 @@
-@use "../variables"; 
+@import url("../variables");
 
 .header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 0rem 3rem;
-  background-color: lighten(variables.$color-accent, 45%);
-  .logo {
+  padding: 0 3rem;
+  background-color: lighten($color-accent, 45%);
+
+  .header__logo {
     font-weight: bold;
+
     img {
       width: 100px;
       height: auto;
     }
   }
-  .nav a {
-    margin-left: 1.5rem;
-    color: variables.$color-accent;
-    text-decoration: none;
-    &:hover { text-decoration: underline; }
-  }
-}
 
-@media (max-width: 523px) {
-.header {
-  padding: 0 1rem;
-  .nav a {
-    font-size: 14px;
+  .header__nav {
+    .header__nav-link {
+      margin-left: 1.5rem;
+      color: $color-accent;
+      text-decoration: none;
+      &:hover { text-decoration: underline; }
     }
   }
 }
 
+@media (width <= 523px) {
+.header {
+  padding: 0 1rem;
+
+  .header__nav {
+    .header__nav-link {
+      font-size: 14px;
+    }
+  }
+}
+}
+
 @media (width <= 370px) {
-  .header .nav a {
-      font-size: 12px;
+  .header .header__nav {
+      .header__nav-link {
+          font-size: 12px;
+      }
   }
 }
 

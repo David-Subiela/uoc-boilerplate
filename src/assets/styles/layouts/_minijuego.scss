@@ -1,19 +1,20 @@
-@use "../variables";
+@import url("../variables");
 
 .juego__adivina {
-  padding: 8svh 4svw;
-  text-align: center;
-  background: variables.$color-fondo;
-  border-radius: 2rem;
   max-width: 600px;
+  padding: 8svh 4svw;
   margin: auto;
+  border-radius: 2rem;
+  background: $color-fondo;
+  text-align: center;
+  container-type: inline-size;
 
   h2 {
     padding-bottom: 45px;
   }
-}                
+}
 
-.contenedor__imagen img {
+.juego__adivina__image-container img {
   width: 100%;
   height: 40dvh;
   object-fit: cover;
@@ -21,43 +22,44 @@
   filter: blur(12px);
   transition: filter 0.1s;
 }
-.contenedor__imagen img.sin-blur {
+
+.juego__adivina__image-container img.sin-blur {
   filter: blur(0);
 }
 
-.opciones {
+.juego__adivina__options {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(46cqmin, 1fr));
+  grid-template-columns: 1fr;
   gap: 1rem;
   margin-top: 2rem;
 }
 
-.opcion {
+.juego__adivina__option {
   padding: 1rem;
   border: none;
-  background: white;
   border-radius: 1rem;
-  cursor: pointer;
+  background: white;
   font-size: 1rem;
-  box-shadow: 0 0 8px rgba(0,0,0,0.15);
+  box-shadow: 0 0 8px rgb(0 0 0 / 15%);
   transition: transform 0.2s;
+  cursor: pointer;
 }
 
-.opcion:hover {
+.juego__adivina__option:hover {
   transform: scale(1.03);
 }
 
-#resultado {
+.juego__adivina__result {
   margin-top: 1.5rem;
   font-size: 1.2rem;
   font-weight: bold;
 }
 
-#reiniciar {
-  margin-top: 1rem;
+.juego__adivina__reset-button {
   padding: 0.8rem 1.5rem;
-  border-radius: 1rem;
+  margin-top: 1rem;
   border: none;
+  border-radius: 1rem;
   background: color(display-p3 0.7 0.4 0.1);
   color: white;
   cursor: pointer;

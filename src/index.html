@@ -11,12 +11,12 @@
 </head>
 
 <body>
-  <div id="modal__reserva" class="modal__reserva" hidden>
-    <div class="modal__reserva__content">
-      <button class="modal__reserva__close">&times;</button>
-      <h3 class="modal__reserva__title">Reserva tu plaza</h3>
-      <h4 class="modal__reserva__subtitle">Domingo, 25 de enero de 2026</h4>
-      <form name="reserva" method="POST" data-netlify="true" class="modal__reserva__form" netlify-honeypot="bot-field">
+  <div id="modal-reserva" class="modal modal-reserva" hidden>
+    <div class="modal-reserva__content">
+      <button class="modal-reserva__close">&times;</button>
+      <h3 class="modal-reserva__title">Reserva tu plaza</h3>
+      <h4 class="modal-reserva__subtitle">Domingo, 25 de enero de 2026</h4>
+      <form name="reserva" method="POST" data-netlify="true" class="modal-reserva__form" netlify-honeypot="bot-field">
         <input type="hidden" name="form-name" value="reserva">
         <input type="text" name="bot-field" style="display:none">
         <label>
@@ -47,7 +47,7 @@
       Participa en nuestras jornadas de cocina tradicional.
       Charlas, talleres y cursos con chefs locales y expertos.
     </p>
-    <div data-modal="modal__reserva">
+    <div data-modal="modal-reserva">
       <a href="#" data-open-modal class="btn btn-primary">Reserva tu plaza</a>
     </div>
   </main>

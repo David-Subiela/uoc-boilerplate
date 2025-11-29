@@ -1,4 +1,4 @@
-@use "../variables";
+@import url("../variables");
 
 #carrusel {
   width: 100%;
@@ -17,9 +17,9 @@
       transition: transform 1s ease-in-out;
 
       .carrusel__elemento {
-        flex: 1 0 100%;
-        height: 100%;
         position: relative;
+        height: 100%;
+        flex: 1 0 100%;
 
         img {
           width: 20%;
@@ -36,7 +36,7 @@
     left: 5%;
     transform: translateY(-50%);
     color: variables.$color-carrusel;
-    text-shadow: 0 2px 8px rgba(0, 0, 0, 0.7);    
+    text-shadow: 0 2px 8px rgb(0 0 0 / 70%);
 
     .hero__title {
       font-size: 3rem;
@@ -44,8 +44,8 @@
     }
 
     .hero__subtitle {
-      font-size: 1.5rem;
       margin-top: 0.5rem;
+      font-size: 1.5rem;
     }
   }
   
@@ -53,18 +53,18 @@
     position: absolute;
     bottom: 70px;
     left: 50%;
-    transform: translateX(-50%);
+    z-index: 10;
     display: flex;
     gap: 12px;
-    z-index: 10;
+    transform: translateX(-50%);
 
     .indicador {
       width: 4vw;
       height: 0.5vw;
-      background-color: rgba(255, 255, 255, 0.5);
       border-radius: 3px;
-      cursor: pointer;
+      background-color: rgb(255 255 255 / 50%);
       transition: all 0.4s ease;
+      cursor: pointer;
 
       &.activo {
         width: 7vw;
@@ -73,39 +73,39 @@
     }
   }
   
-  @media (min-width: 992px) {
+  @media (width >= 992px) {
     .carrusel {
       .slide {
         height: 85vh;
 
         .caption {
           bottom: 20%;
-          font-size: 1.4rem;
           width: 50%;
+          font-size: 1.4rem;
         }
       }
 
       .controls button {
-        font-size: 2rem;
         padding: 0.75rem 1.25rem;
+        font-size: 2rem;
       }
     }
   }
 
-  @media (min-width: 768px) {
+  @media (width >= 768px) {
     .carrusel {
       .slide {
         height: 70vh;
 
         .caption {
-          font-size: 1.2rem;
           width: 70%;
+          font-size: 1.2rem;
         }
       }
     }
   }
 
-  @media (max-width: 630px) {
+  @media (width <= 630px) {
     .hero__text {
       .hero__title {
         font-size: 2.5rem;
@@ -117,7 +117,7 @@
     }    
   }
 
-  @media (max-width: 530px) {
+  @media (width <= 530px) {
     .hero__text {
       .hero__title {
         font-size: 2rem;
@@ -125,7 +125,7 @@
     }    
   }
 
-  @media (max-width: 440px) {
+  @media (width <= 440px) {
     .hero__text {
       .hero__title {
         font-size: 1.7rem;

@@ -1,6 +1,6 @@
-const modal = document.getElementById("modal__reserva");
+const modal = document.getElementById("modal-reserva");
 const btnOpen = document.querySelector("[data-open-modal]");
-const btnClose = document.querySelector(".modal__reserva__close");
+const btnClose = document.querySelector(".modal-reserva__close");
 
 btnOpen.addEventListener("click", (e) => {
   e.preventDefault();

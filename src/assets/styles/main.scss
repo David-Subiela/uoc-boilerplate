@@ -3,25 +3,52 @@
  * Do not include SCSS code in this file.
  */
 
- /**
- * Import dependencies
+/**
+ * 1. Declare the layer order. Layers declared later have higher priority.
  */
-@use "dependencies";
+@layer base, layouts, utilities;
 
 /**
- * Import layouts
- * It's a best practice to use a different partial for each page
+ * 2. Assign imports to their respective layers.
  */
 
- @use "layouts/home";
- @use "layouts/header";
- @use "layouts/footer";
- @use "layouts/speakers";
- @use "layouts/articles";
- @use "layouts/carrusel";
- @use "layouts/minijuego";
- @use "layouts/reserva";
- @use "layouts/modal";
+@layer base {
+  /**
+  * Import dependencies (Bootstrap, etc.) into the 'base' layer.
+  */
+  @import url("dependencies");
+}
+
+@layer layouts {
+  /**
+  * Import layouts. These styles will override 'base' styles
+  * but will be overridden by 'utilities'.
+  * It's a best practice to use a different partial for each page
+  */
+  @import url("layouts/home");
+  @import url("layouts/header");
+  @import url("layouts/footer");
+  @import url("layouts/speakers");
+  @import url("layouts/articles");
+  @import url("layouts/carrusel");
+  @import url("layouts/minijuego");
+  @import url("layouts/reserva");
+  @import url("layouts/modal");
+}
+
+/**
+ * 3. (Example) Define a utilities layer.
+ * Styles in this layer will always win over styles in 'base' and 'layouts'
+ * regardless of selector specificity.
+ */
+@layer utilities {
+  .text-highlight {
+    padding: 2px 4px;
+    border-radius: 3px;
+    background-color: #333;
+    color: #f5efe7;
+  }
+}
 
 /**
  * Do NOT include anything else in this file!

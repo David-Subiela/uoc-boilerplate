@@ -1,37 +1,115 @@
-@use "../variables";
+@import url("../variables");
 
 .article__content {
-  max-width: 800px;
-  margin: 2rem auto;
+  max-width: 900px;
   padding: 2rem;
-  line-height: 1.7;
-  background-color: #f9fcff;
-  border-radius: 10px;
+  margin: 2rem auto;
+  line-height: 1.7;  
 
   &:has(img) {
-    padding: 1rem;
+    padding-top: 3rem;
   }
 
   :is(h1, h2, h3) {
+    font-weight: 600;
     color: #2a6ac7;
   }
 
   :where(p, li) {
     font-size: 1.05rem;
+    color: #444;
+  }
+
+  .article__intro {
+    display: grid;
+    align-items: center;
+    gap: 2rem;
+    padding-bottom: 2rem;
+    grid-template-columns: 1fr 1.5fr;
+
+    .article__intro-left h2 {
+      margin: 0;
+      font-size: 1.9rem;
+      line-height: 1.35;
+      color: $color-text;
+    }
+
+    .article__intro-right p {
+      margin: 0;
+      font-size: 1.15rem;
+      color: #555;
+    }
+
+    @media (width <= 768px) {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  /* Línea separadora */
+  .article__divider {
+    height: 1px;
+    max-width: 100%;
+    margin: 1rem auto 0;    
+    border: 1px solid #c04a00;
+  }
+
+  .article__items {
+    display: grid;
+    gap: 1.5rem;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    counter-reset: itemCounter;
+    container-type: inline-size;
+
+    .article__items__item {
+      position: relative;
+      padding-bottom: 1rem;
+      padding-left: 3rem;
+      counter-increment: itemCounter;
+
+      &::before {
+        position: absolute;
+        top: 0.2rem;
+        left: 0;
+        width: 2rem;
+        font-size: 1.6rem;
+        font-weight: 700;
+        text-align: left;
+        color: $color-accent;
+        content: counter(itemCounter);
+      }
+
+      h3 {
+        margin: 0 0 0.3rem;
+        font-size: 1.2rem;
+        color: $color-text;
+      }
+
+      p {
+        margin: 0;
+        font-size: 1rem;
+        color: #555;
+      }
+    }
+
+    hr {
+      margin: 1.2rem 0;
+      border: none;
+      border-top: 1px solid #e3edfa;
+    }
   }
 
   .article__image {
-    width: 100%;     
-    max-width: 100%; 
-    height: auto;    
     display: block;
-    margin: 2rem auto;
-    border-radius: 10px;
+    width: calc(100% + 4rem);
+    height: auto;
+    max-width: none;
+    margin: 2rem -2rem;    
   }
 
   ul.article__list {
-    margin: 1.5rem 0 2rem;
     padding-left: 1.5rem;
+    margin: 1.5rem 0 2rem;
 
     li {
       margin-bottom: 0.5rem;
@@ -39,10 +117,16 @@
   }
 
   blockquote {
-    border-left: 4px solid variables.$color-accent;
+    border-left: 4px solid $color-accent;
     padding-left: 1rem;
     margin: 1.5rem 0;
     font-style: italic;
     color: #555;
+  }
+
+  @container (min-width: 600px) {
+    .article__items {
+      grid-template-columns: repeat(3, 1fr);
+    }
   }
 }

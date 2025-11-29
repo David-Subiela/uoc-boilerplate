@@ -1,7 +1,7 @@
 @use "sass:color";
 
-$font-family-sans-serif: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
-  "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji",
+$font-family-sans-serif: -apple-system, blinkmacsystemfont, "Segoe UI", roboto,
+  "Helvetica Neue", arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji",
   "Segoe UI Symbol";
 $font-family-serif: "Georgia", "Times New Roman", serif;
 
@@ -26,13 +26,13 @@ $color-text: #333;
 $font-title: 'Merriweather', serif;
 $font-body: 'Open Sans', sans-serif;
 
-$accent: hwb(210 15% 0%);
+$accent: hwb(210deg 15% 0%);
 $accent-p3: color(display-p3 0.2 0.45 1);
-$bg-light: hwb(210 90% 0%);
+$bg-light: hwb(210deg 90% 0%);
 
 $color-acierto: color(display-p3 0.1 0.75 0.2); 
-$color-error: hsl(0, 50%, 40%);                  
-$color-fondo: hwb(45 90% 5%);
+$color-error: hsl(0deg 50% 40%);                  
+$color-fondo: hwb(45deg 90% 5%);
 
 :root {  
   --color-error: #{$color-error};

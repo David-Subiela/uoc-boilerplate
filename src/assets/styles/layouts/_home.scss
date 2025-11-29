@@ -1,16 +1,16 @@
-@use "../variables";
+@import url("../variables");
 
 html, body {
   height: 100%;
 }
 
 body {
-  font-family: variables.$font-body;
-  margin: 0;
-  background-color: variables.$color-bg;
-  color: variables.$color-text;
   display: flex;
   flex-direction: column;
+  margin: 0;
+  background-color: $color-bg;
+  font-family: $font-body;
+  color: $color-text;
 }
 
 main {
@@ -18,8 +18,9 @@ main {
 }
 
 .poster {
-  text-align: center;
   padding: 4rem 2rem;
+  text-align: center;
+  container-type: inline-size;
   
   @supports (display: grid) {
     display: grid;
@@ -40,19 +41,19 @@ main {
   }
 
   &__image {
-    grid-area: image;
     width: 200px;
     height: 200px;
-    background: url('/src/assets/images/food-6056720_1280.jpg') center/cover no-repeat;
     border-radius: 50%;
-    box-shadow: 0 0 15px rgba(0,0,0,0.2);
+    background: url('/src/assets/images/food-6056720_1280.jpg') center/cover no-repeat;
+    box-shadow: 0 0 15px rgb(0 0 0 / 20%);
+    grid-area: image;
   }
 
   &__title {
     grid-area: title;
-    font-family: variables.$font-title;
+    font-family: $font-title;
     font-size: 2.5rem;
-    color: variables.$color-accent;
+    color: $color-accent;
   }
 
   &__subtitle {
@@ -62,12 +63,18 @@ main {
   }
 
   .btn {
-    grid-area: button;
-    background-color: variables.$color-accent;
-    color: white;
     padding: 0.75rem 1.5rem;
     border-radius: 50px;
+    background-color: $color-accent;
+    color: white;
     text-decoration: none;
-    &:hover { background-color: darken(variables.$color-accent, 10%); }
+    grid-area: button;
+    &:hover { background-color: darken($color-accent, 10%); }
+  }
+}
+
+@container (max-width: 400px) {
+  .poster__title {
+    font-size: 2rem;
   }
 }

@@ -1,6 +1,51 @@
-{ 
-    "extends": ["stylelint-config-recommended-scss"], 
-    "rules": { 
-    "selector-class-pattern": "^.[a-z]([a-z0-9-]+)?(__([a-z0-9]+-?)+)?(-([a-z0-9]+-?)+){0,2}$" 
-    } 
-} 
+{
+    "extends": [
+        "stylelint-config-standard",
+        "stylelint-config-recommended-scss"
+    ],
+    "plugins": [
+        "stylelint-order",
+        "stylelint-scss"
+    ],
+    "rules": {
+        "no-descending-specificity": null,
+        "scss/no-global-function-names": null,
+        "selector-class-pattern": "^[a-z0-9]+(?:-[a-z0-9]+)*(?:__[a-z0-9]+(?:-[a-z0-9]+)*)*(?:--[a-z0-9]+(?:-[a-z0-9]+)*)?$",
+        "selector-id-pattern": "^[a-z0-9_-]+$",
+
+        "max-nesting-depth": 5,
+
+        "order/properties-order": [
+            "position", "top", "right", "bottom", "left", "z-index",
+            "display", "flex-direction", "justify-content", "align-items", "gap", "flex-wrap",
+            "float", "clear",
+            "width", "height", "max-width", "max-height", "min-width", "min-height",
+            "padding", "padding-top", "padding-right", "padding-bottom", "padding-left",
+            "margin", "margin-top", "margin-right", "margin-bottom", "margin-left",
+            "border", "border-width", "border-style", "border-color", "border-radius",
+            "background", "background-color", "background-image", "background-position", "background-size", "background-repeat",
+            "font-family", "font-size", "font-weight", "line-height", "text-align", "color",
+            "text-decoration", "text-transform", "letter-spacing",
+            "box-shadow", "filter", "opacity", "transition", "animation", "cursor"
+        ],
+
+        "declaration-empty-line-before": ["always", {
+            "except": ["after-declaration", "after-comment", "first-nested"],
+            "ignore": ["after-comment", "first-nested"]
+        }],
+
+        "at-rule-no-unknown": null,
+        "scss/at-rule-no-unknown": true,
+
+        "unit-allowed-list": ["px", "rem", "em", "%", "vh", "vw", "dvh", "svh", "svw", "cqmin", "fr", "s", "deg"],        
+
+        "shorthand-property-no-redundant-values": true,
+
+        "selector-max-compound-selectors": 5,        
+
+        "scss/dollar-variable-pattern": "^[a-zA-Z][a-zA-Z0-9-]*$",
+        "scss/at-mixin-pattern": "^[a-z][a-z0-9-]*$",
+        "scss/at-function-pattern": "^[a-z][a-z0-9-]*$"        
+
+    }
+}

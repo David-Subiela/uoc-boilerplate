@@ -1,45 +1,46 @@
-@use "../variables";
+@import url("../variables");
 
 .footer {
-  border-top: 1px solid rgba(variables.$color-accent, 0.2);
+  border-top: 1px solid rgba($color-accent, 0.2);
   background-color: #fff;
-  color: variables.$color-accent;
+  color: $color-accent;
 
    .footer__top {
-    margin-bottom: 1rem;
-    text-align: center;
     padding-top: 30px;
     padding-bottom: 30px;
+    margin-bottom: 1rem;
+    text-align: center;
+
     p {
       margin: 0;
       font-size: 0.95rem;
-      color: variables.$color-accent;
+      color: $color-accent;
     }
   }
 
   .footer__divider {
-    border: none;
     height: 1px;
-    background-color: variables.$color-accent;
-    margin: 1rem auto 0rem auto;
     max-width: 80%;
+    margin: 1rem auto 0;
+    border: none;
+    background-color: $color-accent;
   }
 
   .footer__content {
-    max-width: 80%;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    flex-wrap: nowrap;    
-    margin: 0 auto;
     gap: 1rem;
-  } 
+    flex-wrap: nowrap;
+    max-width: 80%;    
+    margin: 0 auto;
+  }
 
   .footer__logo {
-    font-weight: bold;
     display: flex;
     align-items: center;
     gap: 0.5rem;
+    font-weight: bold;
 
     img {
       width: 100px;
@@ -48,16 +49,16 @@
   }
 
   .footer__nav {
-    flex: 1;                 
+    flex: 1;
     display: flex;
-    justify-content: center; 
+    justify-content: center;
   }
 
-  .footer__nav a {
+  .footer__nav-link {
     margin: 0 0.75rem;
-    text-decoration: none;
-    color: variables.$color-accent;
     font-weight: 500;
+    color: $color-accent;
+    text-decoration: none;
 
     &:hover {
       text-decoration: underline;
@@ -70,10 +71,10 @@
     padding-bottom: 20px;
   }
 
-  .footer__social a {
+  .footer__social-link {
     margin-left: 0.75rem;
-    color: variables.$color-accent;
     font-size: 1.1rem;
+    color: $color-accent;
 
     &:hover {
       opacity: 0.8;
@@ -81,11 +82,11 @@
   }
 }
 
-@media (max-width: 672px) {
+@media (width <= 672px) {
   .footer__content {
     flex-direction: column;
+    gap: 1.5rem;
     text-align: center;
-    gap: 1.5rem;           
   }
 
   .footer__logo {
@@ -93,17 +94,17 @@
 
     img {
       width: 80px !important;
-    
+
     }
   }
 
   .footer__nav {
     justify-content: center;
-    flex-wrap: wrap;        
     gap: 0.5rem;
+    flex-wrap: wrap;
   }
 
-  .footer__nav a {
+  .footer__nav-link {
     margin: 0 0.5rem;
   }
 
@@ -111,4 +112,3 @@
     justify-content: center;
   }
 }
-
