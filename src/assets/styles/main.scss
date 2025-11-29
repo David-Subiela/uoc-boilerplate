@@ -16,7 +16,7 @@
   /**
   * Import dependencies (Bootstrap, etc.) into the 'base' layer.
   */
-  @import url("dependencies");
+  @import "dependencies";
 }
 
 @layer layouts {
@@ -25,15 +25,15 @@
   * but will be overridden by 'utilities'.
   * It's a best practice to use a different partial for each page
   */
-  @import url("layouts/home");
-  @import url("layouts/header");
-  @import url("layouts/footer");
-  @import url("layouts/speakers");
-  @import url("layouts/articles");
-  @import url("layouts/carrusel");
-  @import url("layouts/minijuego");
-  @import url("layouts/reserva");
-  @import url("layouts/modal");
+  @import "layouts/home";
+  @import "layouts/header";
+  @import "layouts/footer";
+  @import "layouts/speakers";
+  @import "layouts/articles";
+  @import "layouts/carrusel";
+  @import "layouts/minijuego";
+  @import "layouts/reserva";
+  @import "layouts/modal";
 }
 
 /**
