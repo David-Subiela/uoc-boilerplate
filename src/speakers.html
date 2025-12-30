@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <link rel="stylesheet" type="text/css" href="./assets/styles/main.scss">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap"
+        rel="stylesheet">
+    <link href="../node_modules/aos/dist/aos.css" rel="stylesheet">
+    <title>PEC 2 - Jornadas de Cocina Tradicional - Speakers</title>
+</head>
+
+<body class="bg-[#f5efe7] font-sans text-gray-800 flex flex-col h-full">
+    <include src="views/header.html"></include>
+    <main class="px-8 py-16">
+        <section class="flex flex-wrap justify-center gap-6 max-w-4xl mx-auto">
+            <include src="views/speaker-card.html" locals='{
+                "modal_id": "speaker1",
+                "image_src": "/src/assets/images/cocinero1.jpg",
+                "image_alt": "cocinero con naranja y vaso de agua",
+                "name": "Manuel Ortega",
+                "description": "Cocina tradicional valenciana"
+            }'></include>
+            <include src="views/speaker-card.html" locals='{
+                "modal_id": "speaker2",
+                "image_src": "/src/assets/images/cocinero2.jpg",
+                "image_alt": "Cocinero Ricardo Ferrer",
+                "name": "Ricardo Ferrer",
+                "description": "Cocina de montaña y guisos tradicionales"
+            }'></include>
+            <include src="views/speaker-card.html" locals='{
+                "modal_id": "speaker3",
+                "image_src": "/src/assets/images/cocinero3.jpg",
+                "image_alt": "Cocinera Isabel Molina",
+                "name": "Isabel Molina",
+                "description": "Repostería artesanal y dulces festivos"
+            }'></include>
+            <include src="views/speaker-card.html" locals='{
+                "modal_id": "speaker4",
+                "image_src": "/src/assets/images/cocineros4.png",
+                "image_alt": "Equipo de cocineros",
+                "name": "Ana Beltrán, Jordi Alapont, Pablo Sanchís",
+                "description": "Cocina tradicional campesina (trío de cocineros)"
+            }'></include>
+            <include src="views/speaker-card.html" locals='{
+                "modal_id": "speaker5",
+                "image_src": "/src/assets/images/cocinero5.jpg",
+                "image_alt": "Cocinera Laura Rosell",
+                "name": "Laura Rosell",
+                "description": "Cocina mediterránea vegetal"
+            }'></include>
+            <include src="views/speaker-card.html" locals='{
+                "modal_id": "speaker6",
+                "image_src": "/src/assets/images/cocinero6.jpg",
+                "image_alt": "Cocinero Tomás Requena",
+                "name": "Tomás Requena",
+                "description": "Asados tradicionales y cocina al fuego"
+            }'></include>
+        </section>
+        <!-- MODALS -->
+        <div id="speaker1"
+            class="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/60 backdrop-blur-sm speaker-modal-wrapper">
+            <div class="relative max-w-lg w-full p-8 rounded-lg bg-white shadow-2xl animate-fadeIn"
+                data-aos="flip-right">
+                <span
+                    class="absolute top-3 right-4 text-3xl cursor-pointer text-uoc-accent hover:opacity-70 modal__close">&times;</span>
+                <p class="pt-5 text-gray-700 text-base sm:text-lg">
+                    Manuel Ortega es especialista en cocina tradicional valenciana, destacando por sus técnicas clásicas
+                    y el uso de productos de kilómetro cero. Presentará su trabajo sobre arroces típicos, incluyendo el
+                    emblemático arroz al horno, uno de los platos más representativos de la gastronomía popular.
+                </p>
+                <img src="/src/assets/images/arroz_horno.jpg" alt="Arroz al horno" class="block w-1/2 mx-auto">
+            </div>
+        </div>
+        <div id="speaker2"
+            class="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/60 backdrop-blur-sm speaker-modal-wrapper">
+            <div class="relative max-w-lg w-full p-8 rounded-lg bg-white shadow-2xl animate-fadeIn"
+                data-aos="flip-right">
+                <span
+                    class="absolute top-3 right-4 text-3xl cursor-pointer text-uoc-accent hover:opacity-70 modal__close">&times;</span>
+                <p class="pt-5 text-gray-700 text-base sm:text-lg">
+                    Ricardo Ferrer centra su labor en la cocina serrana y los guisos a fuego lento. Su ponencia abordará
+                    recetas de alta montaña, como la tradicional olla de la Plana, un plato contundente elaborado con
+                    legumbres, huesos salados y verduras de temporada.
+                </p>
+                <img src="/src/assets/images/olla_de_la_plana.jpg" alt="Olla de la Plana" class="block w-1/2 mx-auto">
+            </div>
+        </div>
+        <div id="speaker3"
+            class="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/60 backdrop-blur-sm speaker-modal-wrapper">
+            <div class="relative max-w-lg w-full p-8 rounded-lg bg-white shadow-2xl animate-fadeIn"
+                data-aos="flip-right">
+                <span
+                    class="absolute top-3 right-4 text-3xl cursor-pointer text-uoc-accent hover:opacity-70 modal__close">&times;</span>
+                <p class="pt-5 text-gray-700 text-base sm:text-lg">
+                    Isabel Molina es maestra repostera especializada en dulces tradicionales. Compartirá técnicas y
+                    secretos de elaboración de postres emblemáticos, con especial atención a los "rollets d'anís", una
+                    receta típica en celebraciones populares.
+                </p>
+                <img src="/src/assets/images/rollets_anis.jpg" alt="Rollitos de anís" class="block w-1/2 mx-auto">
+            </div>
+        </div>
+        <div id="speaker4"
+            class="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/60 backdrop-blur-sm speaker-modal-wrapper">
+            <div class="relative max-w-lg w-full p-8 rounded-lg bg-white shadow-2xl animate-fadeIn"
+                data-aos="flip-right">
+                <span
+                    class="absolute top-3 right-4 text-3xl cursor-pointer text-uoc-accent hover:opacity-70 modal__close">&times;</span>
+                <p class="pt-5 text-gray-700 text-base sm:text-lg">
+                    El equipo formado por Ana Beltrán, Jordi Alapont y Pablo Sanchís trabaja en la preservación de la
+                    cocina campesina y los métodos tradicionales de preparación. Su intervención girará en torno a
+                    platos de origen rural como el puchero valenciano, preparado siguiendo técnicas transmitidas durante
+                    generaciones.
+                </p>
+                <img src="/src/assets/images/puchero-valenciano.jpg" alt="Puchero valenciano"
+                    class="block w-1/2 mx-auto">
+            </div>
+        </div>
+        <div id="speaker5"
+            class="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/60 backdrop-blur-sm speaker-modal-wrapper">
+            <div class="relative max-w-lg w-full p-8 rounded-lg bg-white shadow-2xl animate-fadeIn"
+                data-aos="flip-right">
+                <span
+                    class="absolute top-3 right-4 text-3xl cursor-pointer text-uoc-accent hover:opacity-70 modal__close">&times;</span>
+                <p class="pt-5 text-gray-700 text-base sm:text-lg">
+                    Laura Rosell es cocinera especializada en la reinterpretación de recetas mediterráneas basadas en
+                    vegetales. En su charla explorará platos tradicionales adaptados a la cocina actual, destacando la
+                    borreta alicantina, un guiso sencillo y nutritivo elaborado con acelgas, bacalao y ñoras.
+                </p>
+                <img src="/src/assets/images/borreta-alicantina.jpg" alt="Borreta alicantina"
+                    class="block w-1/2 mx-auto">
+            </div>
+        </div>
+        <div id="speaker6"
+            class="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/60 backdrop-blur-sm speaker-modal-wrapper">
+            <div class="relative max-w-lg w-full p-8 rounded-lg bg-white shadow-2xl animate-fadeIn"
+                data-aos="flip-right">
+                <span
+                    class="absolute top-3 right-4 text-3xl cursor-pointer text-uoc-accent hover:opacity-70 modal__close">&times;</span>
+                <p class="pt-5 text-gray-700 text-base sm:text-lg">
+                    Tomás Requena es experto en técnicas de cocción a la brasa y asados tradicionales. Compartirá
+                    procesos ancestrales y recetas emblemáticas, como el cordero al ajillo, preparado siguiendo métodos
+                    de campo transmitidos por generaciones.
+                </p>
+                <img src="/src/assets/images/cordero-al-ajillo.jpg" alt="Cordero al ajillo" class="block w-1/2 mx-auto">
+            </div>
+        </div>
+
+    </main>
+    <include src="views/footer.html"></include>
+    <script type="module" src="./assets/scripts/speakers.js"></script>
+    <script src="../node_modules/aos/dist/aos.js"></script>
+    <script>
+        if (window.innerWidth >= 1024) {
+            AOS.init({
+                duration: 5000,
+            });
+        } else {
+            document.querySelectorAll("[data-aos]").forEach((el) => {
+                el.removeAttribute("data-aos");
+                el.removeAttribute("data-aos-offset");
+                el.removeAttribute("data-aos-easing");
+            });
+        }
+    </script>
+</body>
+
+</html>

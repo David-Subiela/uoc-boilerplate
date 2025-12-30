@@ -1,0 +1,33 @@
+@use "../variables";
+
+.speaker-modal-wrapper {
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+  &.show {
+    opacity: 1;
+    pointer-events: auto;
+  }
+}
+
+.speaker-modal-content {
+  animation: fade-in .3s ease-out;
+}
+
+.speaker-modal-text {
+  @media (width <= 480px) {
+    font-size: 14px;
+  }
+}
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+    transform: scale(.9);
+  }
+
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}

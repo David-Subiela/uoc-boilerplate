@@ -1,20 +1,12 @@
-/**
- * Use this file to import partials.
- * Do not include SCSS code in this file.
- */
 
- /**
- * Import dependencies
- */
-@use "dependencies";
+@use "layouts/home";
+@use "layouts/speakers";
+@use "layouts/reserva";
+@use "custom-components";
+@use "layouts/extra";
 
-/**
- * Import layouts
- * It's a best practice to use a different partial for each page
- */
+@tailwind base;
 
- @use "layouts/home";
+@tailwind components;
 
-/**
- * Do NOT include anything else in this file!
- */
+@tailwind utilities;
