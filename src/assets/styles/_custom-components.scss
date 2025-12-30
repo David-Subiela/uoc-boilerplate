@@ -13,44 +13,7 @@
   @apply bg-uoc-accent text-white hover:bg-[#8f3600];
 }
 
-/* 3. Componente de Tarjeta para Modales */
-.modal-card {
-  @apply relative w-11/12 max-w-lg p-10 rounded-2xl bg-white/85 shadow-2xl backdrop-blur-lg;
-}
-
-/* 4. Componente para Campos de Formulario */
-.form-input {
-  @apply w-full px-4 py-3 bg-white/70 border border-uoc-accent/20 rounded-xl text-base
-         transition-all duration-200 ease-in-out
-         focus:border-uoc-accent focus:ring-4 focus:ring-uoc-accent/20 focus:outline-none;
-}
-
-/* 5. Componente para Texto Resaltado */
-.text-highlight {
-  @apply px-[4px] py-[2px] rounded-[3px] bg-[#333] text-[#f5efe7];
-}
-
-/* 6. Componente para Opciones de Juego */
-.game-option {
-  @apply py-3 px-6 border-none rounded-xl bg-uoc-accent text-white cursor-pointer transition-colors duration-300;
-}
-
-.game-option:hover {
-  @apply bg-[#8f3600]; /* This corresponds to `color(display-p3 0.6 0.3 0.05)` in the original SCSS */
-}
-
-/* 7. Componente Modal base con transiciones basadas en el atributo hidden */
-.modal {
-  @apply fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/60 backdrop-blur-sm transition-opacity duration-300;
-}
-.modal[hidden] {
-  @apply opacity-0 pointer-events-none;
-}
-.modal:not([hidden]) {
-  @apply opacity-100 pointer-events-auto;
-}
-
-/* 8. Componente de Tarjeta de Ponente */
+/* 3. Componente de Tarjeta de Ponente */
 .speaker-card {
   @apply w-64 p-4 border border-gray-300 rounded-lg bg-white text-center cursor-pointer;
 }
